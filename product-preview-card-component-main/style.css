@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@100;300;400;600&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    height: 100dvh;
+}
+
+main {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+section {
+    display: flex; 
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    max-width: 540px;
+    height: 400px;
+}
+
+.image {
+    height: 100%;
+    width: 50%;
+    background-image: url(images/image-product-desktop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 0 0 8px;
+}
+
+.content {
+    padding: 1.3em;
+    height: 100%;
+    width: 50%;
+}
+
+.product {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+h1 {
+    margin-top: .3em;
+    margin-bottom: .5em;
+    font-size: 30px;
+    text-wrap: balance;
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: 600;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 1em;
+    line-height: 25px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.price--desc {
+    color: hsl(158, 36%, 37%);
+    font-size: 30px;
+    font-weight: 800;
+    font-family: 'Fraunces';
+}
+
+.discount {
+    font-size: 12px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 600;
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(158, 36%, 37%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        background-color: hsl(158, 36%, 25%);
+    }
+}
+
+
+@media (max-width: 574px) {
+    section {
+        flex-flow: column;
+        max-width: 340px;
+        height: 570px;
+    }
+    .image{
+        height: 100%;
+        width: 100%;
+        background-image: url(images/image-product-mobile.jpg);
+        border-radius: 8px 8px 0 0;
+    }
+    .content{
+        width: 100%;
+
+    }
+    h1{
+        font-size: 25px;
+    }
+    .description{
+        font-size: 14px;
+
+    }
+}
